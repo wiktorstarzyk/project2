@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="lib/codemirror/codemirror.css">
+<script src="lib/codemirror/codemirror.js"></script>
+<script src="lib/codemirror/javascript.js"></script>
+<script src="http://popcornjs.org/code/dist/popcorn-complete.js"></script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div id="content">
+	<video width="560" height="315" controls="controls" id="video">
+		<source src="videos/for-loop.mp4"></source>
+	</video>
+	<div class="accordion">
+		<section id="one">
+			<h2><a href="#one"> While loop </a></h2>
+			<div>
+				<p>The while statement is used to execute a certain block of code repetitively.
+				The general form of the while statement is:  </p>
+				<p class="code"> while (condition) {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;// code <br/>
+					}
+				</p>
+			</div>
+		</section>
+		<section id="two">
+			<h2><a href="#two"> For loop </a></h2>
+			<div>
+				<p>The while statement is used to execute a certain block of code repetitively.
+				The general form of the while statement is:  </p>
+			</div>
+		</section>
+	</div>
+	
+	<div style="clear: both"></div>
+	
+	<div id="codepad">
+		<div id="codearea">
+			<textarea id="codearea_" name="codearea_"></textarea>
+			<script>
+				var editor = CodeMirror.fromTextArea(document.getElementById("codearea_"), {
+					lineNumbers: true,
+					matchBrackets: true
+      			});
+    		</script>
+		</div>
+	</div>
+	
+	<script src="listener.js"></script>
+    
+</div>
+
+</body>
+
+</html>
