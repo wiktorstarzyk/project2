@@ -4,6 +4,7 @@ pop.code({
 		start: 2,
 		end: 5,
 		onStart : function(options){
+			$("#video").get(0).pause();
 			displayCode("array");
 		}
 	}
@@ -13,7 +14,9 @@ pop.code({
 	start: 6,
 	end: 11,
 	onStart : function(options){
+		$("#video").get(0).pause();
 		displayCode("ternary");
+
 	}
 }
 );

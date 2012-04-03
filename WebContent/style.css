@@ -1,19 +1,19 @@
 @CHARSET "ISO-8859-1";
 
 body {
-	width: 100%;
+    width: 100%;
 }
 
 #content{
-	padding-top: 25px;
-	width: 960px;
-	height: 100%;
-	margin: auto;
-	/* background: rgb(245,245,245); */
+    padding-top: 25px;
+    width: 960px;
+    height: 100%;
+    margin: auto;
+    /* background: rgb(245,245,245); */
 }
 
 #video{
-	float: left;
+    float: left;
 }
 
 section
@@ -22,32 +22,41 @@ section
 }
 
 #codepad {
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 #codearea {
-	width: 560px;
-	height: 300px;
-	background: url('images/grid_.png');
+    width: 560px;
+    height: 300px;
+    float:left;
+    border:1px solid rgb(225,225,225);
 }
 
+#outputarea {
+    float:left;
+    width: 375px;
+    height: 280px;
+    border:1px solid rgb(225,225,225);
+    padding:10px;
+    background-color:rgb(240, 240, 240);
+}
 p {
-	margin: 5px;
+    margin: 5px;
 }
 
 p.code{
-	font-family: courier;
+    font-family: courier;
 }
 
 .accordion
-{	
-	float: left;
+{   
+    float: left;
     
-		width: 395px;
-	margin-left: 5px;
-	font-family: 'Verdana';
-	font-size: 12px;
-		margin-left: 5px;
+        width: 395px;
+    margin-left: 5px;
+    font-family: 'Verdana';
+    font-size: 12px;
+        margin-left: 5px;
 }
 
 .accordion section
@@ -110,4 +119,33 @@ p.code{
 .accordion :target h2 + div
 {
     height: 160px;
+}
+
+.button
+{
+    padding:5px;
+    display:block;
+    float:left;
+    background-color:rgb(65,65,65);
+    color:white;
+    
+}
+.right
+{
+    float:right;
+}
+
+#runButton
+{
+    background-color:green;
+    color:white;
+    width:25px;
+    margin-right:10px;
+
+}
+
+#toolbar
+{
+    padding:10px 0;
+    width:560px;
 }
