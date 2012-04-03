@@ -25,7 +25,7 @@ pop.code({
 
 function displayCode (key){
 	if (key=="array")
-		editor.setValue("var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];");
+		editor.setValue("//Write a for loop that print Hello World 10 times\n");
 	else if (key=="ternary")
-		editor.setValue("var c = a > b ? a : b");
+		editor.setValue("//Write a while loop that prints Hello World 10 times\n");
 }

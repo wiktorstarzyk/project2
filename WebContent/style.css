@@ -130,6 +130,12 @@ p.code{
     color:white;
     
 }
+
+div.button:hover{
+    background-color:white;
+    color:black;
+}
+
 .right
 {
     float:right;
