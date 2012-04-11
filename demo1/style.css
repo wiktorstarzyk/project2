@@ -1,0 +1,157 @@
+@CHARSET "ISO-8859-1";
+
+body {
+    width: 100%;
+}
+
+#content{
+    padding-top: 25px;
+    width: 960px;
+    height: 100%;
+    margin: auto;
+    /* background: rgb(245,245,245); */
+}
+
+#video{
+    float: left;
+}
+
+section
+{
+    display: block;
+}
+
+#codepad {
+    margin-top: 10px;
+}
+
+#codearea {
+    width: 560px;
+    height: 300px;
+    float:left;
+    border:1px solid rgb(225,225,225);
+}
+
+#outputarea {
+    float:left;
+    width: 375px;
+    height: 280px;
+    border:1px solid rgb(225,225,225);
+    padding:10px;
+    background-color:rgb(240, 240, 240);
+}
+p {
+    margin: 5px;
+}
+
+p.code{
+    font-family: courier;
+}
+
+.accordion
+{   
+    float: left;
+    
+        width: 395px;
+    margin-left: 5px;
+    font-family: 'Verdana';
+    font-size: 12px;
+        margin-left: 5px;
+}
+
+.accordion section
+{
+}
+
+.accordion h2
+{
+    margin: 0;
+    background-color: rgb(65,65,65);
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+
+.accordion p
+{
+    padding: 10px;
+}
+
+.accordion h2 a
+{
+    display: block;
+    position: relative;
+    font: 13px/1 'Verdana', 'Lucida Sans';
+    padding: 4px 10px;
+    color: rgb(245,245,245);
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    font-weight: bold;
+}
+
+.accordion h2 a:hover
+{
+    background: rgb(230,230,230);
+    color: rgb(30,30,30); 
+}
+
+.accordion h2 + div
+{
+    height: 0;
+    overflow: hidden;
+    -moz-transition: height 0.3s ease-in-out;
+    -webkit-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+}
+
+.accordion :target h2 a:after
+{
+    /*content: '';*/
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -3px;
+    border-top: 5px solid #333;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.accordion :target h2 + div
+{
+    height: 160px;
+}
+
+.button
+{
+    padding:5px;
+    display:block;
+    float:left;
+    background-color:rgb(65,65,65);
+    color:white;
+    
+}
+
+div.button:hover{
+    background-color:white;
+    color:black;
+}
+
+.right
+{
+    float:right;
+}
+
+#runButton
+{
+    background-color:green;
+    color:white;
+    width:25px;
+    margin-right:10px;
+
+}
+
+#toolbar
+{
+    padding:10px 0;
+    width:560px;
+}

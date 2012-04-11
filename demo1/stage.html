@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="lib/codemirror/codemirror.css">
+<script src="lib/codemirror/codemirror.js"></script>
+<script src="lib/codemirror/javascript.js"></script>
+<script src="http://popcornjs.org/code/dist/popcorn-complete.js"></script>
+<script type="text/javascript" src="./lib/jquery.min.js"></script>
+
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+    function print() {
+        var f=$("#outputarea");
+        var v=f.val();
+        var s='';
+
+        if (v != '') v = v + "\n";
+
+        if(arguments.length > 0) s = arguments[0];
+
+        for(var i=1; i < arguments.length; i++) s = s + ' ' + arguments[i];
+
+        f.val(v + s);
+    }
+    </script>
+</head>
+<body>
+
+<div id="content">
+    <video width="560" height="315" id="video" controls="">
+        <source src="videos/for-loop.mp4"></source>
+    </video>
+    <div class="accordion">
+        <section id="one">
+            <h2><a href="#one"> While loop </a></h2>
+            <div>
+                <p>The while statement is used to execute a certain block of code repetitively.
+                The general form of the while statement is:  </p>
+                <p class="code"> while (condition) {<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;// code <br/>
+                    }
+                </p>
+            </div>
+        </section>
+        <section id="two">
+            <h2><a href="#two"> For loop </a></h2>
+            <div>
+                <p>The while statement is used to execute a certain block of code repetitively.
+                The general form of the while statement is:  </p>
+            </div>
+        </section>
+    </div>
+    
+    <div style="clear: both"></div>
+    
+    <div id="codepad">
+        <div id="codearea">
+            <textarea id="codearea_" name="codearea_"></textarea>
+            <script>
+                var editor = CodeMirror.fromTextArea(document.getElementById("codearea_"), {
+                    lineNumbers: true,
+                    matchBrackets: true
+                });
+            </script>
+        </div>
+    </div>
+    <textarea id="outputarea" wrap="logical" row="20" cols="70" readonly="readonly"></textarea>
+    <div style="clear: both"></div>
+    <script src="listener.js"></script>
+    <div id="toolbar">
+        <div id="runButton" class="button">run</div>
+        <div id="clearButton" class="button">clear</div>
+        <div id="saveButton" class="button right">save</div>
+    </div>
+    <script type="text/javascript">
+        $("#runButton").click(function(){
+            $("#outputarea").val("");
+            try {
+                eval(editor.getValue());
+            }
+            catch(error){
+                print("Error: ", error.message);
+            }
+        });
+
+        $("#clearButton").click(function(){
+            editor.setValue("");
+        });
+
+    </script>
+</div>
+
+</body>
+
+</html>
